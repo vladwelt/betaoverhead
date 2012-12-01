@@ -1,0 +1,24 @@
+{% extends "registration/base_registration.html" %}
+
+{% block title %}Iniciar Seción{% endblock %}
+
+{% block content %}
+<div>
+    {% block content_title %}
+    <h2>Inciar seción</h2>
+    {% endblock %}
+    
+    {% if form.errors %}
+	<p>Tu nombre de usuario y/o contraseña no son iguales.
+		Intenta de nuevo.</p>
+	{% endif %}
+	<form method="post" action="."> {% csrf_token %}
+		<p><label for="id_username">Nombre de usuario:</label>
+		{{ form.username }}</p>
+		<p><label for="id_password">Contraseña:</label>
+		{{ form.password }}</p>
+		<input type="hidden" name="next" value="/profile" />
+		<input type="submit" value="login" />
+	</form>
+ </div>
+ {% endblock %}

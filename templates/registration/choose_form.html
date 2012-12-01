@@ -1,0 +1,25 @@
+{% extends "registration/base_registration.html" %}
+{% load i18n %}
+
+{% block title %}{% trans 'Choose kind of register' %}{% endblock %}
+
+{% block content %}
+<div id="content-center">
+    <br /><br /><br /><br />
+    <h2 class ="color2">{% trans 'Choose kind of register' %}</h2>
+    <br /><br /><br />
+    <form id="registrar" name="registrar" action="." method="post">{% csrf_token %}
+        {#{{ form.as_p }}#}
+        
+        {% for field in form %}
+            <!--p class="radio" name="radio">{{field.label_tag}} </p>
+            <br /-->
+             {{field}} 
+            {# {{ field.type }}#}
+        {% endfor %}
+
+
+        <p class="submit"><button style="display: none" type="submit">Submit</button></p>
+    </form>
+</div>
+{% endblock %}

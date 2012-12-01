@@ -1,0 +1,32 @@
+{% extends "registration/base_registration.html" %}
+{% load i18n %}
+
+{% block title %}{% if account %}{% trans 'Activation complete' %}{% else %}{% trans 'Activation problem' %}{% endif %}{% endblock %}
+
+{% block content %}
+<div id="content-center">
+	{% if account %}
+		<br /><br /><br /><br />
+                <h2 class="color2">{% trans 'Activation complete' %}</h2>
+
+		{% url auth_login as login_url %}
+		<p>{% blocktrans %}Activation complete! You may now <a href="{{ login_url }}">login</a> using the username and password you set at registration.{% endblocktrans %}</p>
+
+	{% else %}
+                <br /><br /><br /><br />
+		<h2 class="color2">{% trans 'Activation problem' %}</h2>
+                <br /><br />
+		<p>{% trans 'Sorry, it seems that your activation key is invalid. Please check the url again.' %}</p>
+                <br /><br />
+         <form action="." method="post">
+            {% for field in form %}
+                <p>{{ field.label_tag }}</p>
+                    {{ field }}
+            {% endfor %}
+            <br /><br /><br />
+         <p class="submit"><button type="submit">Submit</button></p>
+         </form>
+
+	{% endif %}
+</div><!-- end of # content center-->
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "registration/base_registration.html" %}
+{% load i18n %}
+
+{% block title %}{% trans 'Register' %}{% endblock %}
+
+{% block content %}
+<div id="content-center">
+    <br /><br /><br /><br />
+    {% if client %}
+            <h2 class="color2">{% trans 'Register Client' %}</h2>
+            <br /><br /><br /><br />
+            <form action="." method="post">{% csrf_token %}
+                {% if form.hidden_fields %}
+                    {% for item in form.hidden_fields %}
+                        {{ item }}
+                    {% endfor %}
+                {% endif %}
+
+                {% if form.non_field_errors %}
+                    <p class="form-error">
+                        {% for error in form.non_field_errors %}
+                        <span class="form-error-msg">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+                {% endif %}
+          </form>
+          <form action="." method="post">{% csrf_token %}
+            {% for field in form %}
+             <table>
+                <tr>{{field.label_tag}} </tr>
+                <tr><td class="td">{{field}}<h6 class="color3">{{field.errors}}</h6></td></tr>
+             </table>
+            {% endfor %}
+            <br/><br/><br/>
+            <p class="submit"><button type="submit">Submit</button></p>
+          </form>
+    {% else %}
+        <h2 class="color2">{% trans 'Register Technical' %}</h2>
+        <br /><br /><br /><br />
+        <form action="" method="post">{% csrf_token %}
+        <table>
+        {% for field in form %}
+        <table>
+            <tr>{{field.label_tag}} </tr>
+            <tr><td class="td">{{field}}<h6 class="color3">{{field.errors}}</h6></td></tr>
+        </table>
+        {% endfor %}
+        
+        {% for field in user_name %}
+        <table>
+            <tr>{{field.label_tag}} </tr>
+            <tr><td class="td">{{field}} <h6 class="color3">{{field.errors}}</h6></td></tr>
+        </table>
+        {% endfor %}
+
+        {% for field in user_profile %}
+        <table>
+            <tr>{{field.label_tag}}</tr>
+            <tr><td class="td">{{field}}<h6 class="color3">{{field.errors}}</h6></td></tr>
+        </table>
+        {% endfor %}
+        </table>
+        <p class="submit"><button type="submit">Submit</button></p>
+        </form>
+    {% endif %}
+</div>
+{% endblock %}
