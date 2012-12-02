@@ -34,6 +34,10 @@ html, body, div, ul, li, h1, h2 {
     color: #2ea6c9;
 }
 
+.warning {
+    background-color: #f0ede8;
+}
+
 /* colores personalizados del menu */
 .yellow { border-top: 8px solid #c39a1e; }
 .blue { border-top: 8px solid #2a82a8; }
@@ -286,4 +290,8 @@ body {
     margin-top: 20px;
     background-image: url('/static/footer.gif');
     background-repeat: no-repeat;
+}
+
+form.form p {
+    
 }

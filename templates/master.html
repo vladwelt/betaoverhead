@@ -26,14 +26,26 @@
     <body>
         <div id="toolbar">
             <div id="toolbar_wrapper">
-                {% block toolbar %}{% endblock %}
+                {% block toolbar %}
+                <ul>
+                    <li><a href="{% url auth_login %}">Ingresar</a></li>
+                    <li><a href="{% url registration_register %}"><span class="cyan_fg">Registrarse</span></a></li>
+                </ul>
+                {% endblock %}
                 <div class="clear"></div>
             </div>
         </div>
         <div id="menubar">
             <div id="menubar_wrapper">
                 <div id="logo"></div>
-                {% block menubar %}{% endblock %}
+                {% block menubar %}
+                <ul class="left">
+                    <li class="yellow"><a href="/">Principal</a></li>
+                    <li class="blue"><a href="#">Contenidos minimos</a></li>
+                    <li class="red"><a href="#">Comunidades</a></li>
+                    <li class="green"><a href="#">Calendario</a></li>
+                </ul>
+                {% endblock %}
                 <ul class="right">
                     <li><a href="#">Contactenos</a></li>
                 </ul>
