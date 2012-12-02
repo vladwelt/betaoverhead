@@ -1,62 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Language" content="es" />
+        <meta http-equiv="title" content="Comunidad Educativa Boliviana 'Adela'" />
 
-		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-		Remove this if you use the .htaccess -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="author" content="Beta Overhead" />
+        <meta name="description" content="" />
+        <meta name="distribution" content="global" />
+        <meta name="keywords" content="redes,educacion,social,distribuido" />
+        <meta name="locality" content="La Paz, Bolivia" />
+        <meta name="organization" content="Beta Overhead (Hackaton 2012)" />
+        <meta name="revisit" content="1 days" />
+        <meta name="title" content="" />
+        <meta name="viewport" content="width=device-width; initial-scale=1.0" />
 
-		<title>
-			{% block title %}
-				Beta Overhead
-			{% endblock %}
-		</title>
-		<meta name="description" content="" />
-		<meta name="author" content="Antonio" />
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
-
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-	</head>
-
-	<body>
-		<div>
-			<header>
-				<h1>Hola mundo</h1>
-			</header>
-			<nav>
-				{% block sidebar%}
-				{% endblock %}
-				
-			</nav>
-			{% block logarea %}
-            <div>
-              {% if user.is_authenticated %}
-              <span>Bienvenido, {{ user.first_name }}.</span>
-              <a href="/">Mi cuenta</a>
-              <a href="{% url auth_logout %}">Salir</a>
-              {% else %}
-              <a href="{% url registration_register %}">Registrar</a>
-              <span> | </span>
-              <a href="{% url auth_login %}">Ingresar</a>
-              <span> | </span>
-              <a href="{% url auth_password_reset %}">Recosdar mi contraseña</a>
-              {% endif %}
+        <link media="all" href="/static/style.css" type="text/css" rel="stylesheet" />
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div id="toolbar"><div id="toolbar_wrapper">{% block toolbar %}{% endblock %}</div></div>
+        <div id="menubar">
+            <div id="menubar_wrapper">
+                {% block menubar %}{% endblock %}
+                <ul id="contact" class="right">
+                    <li><a href="#">Contactenos</a></li>
+                </ul>
             </div>
-            {% endblock %}
-
-			<div id="content">
-				{% block  content %}
-				{% endblock %}
-			</div>
-
-			<footer>
-				{% block footer %}
-				{% endblock %}
-			</footer>
-		</div>
-	</body>
+        </div>
+        <div id="content">
+            <div id="main">{% block content %}{% endblock %}</div>
+            <div id="sidebar">
+                {% block sidebar1 %}{% endblock %}
+                {% block sidebar2 %}{% endblock %}
+                {% block sidebar3 %}{% endblock %}
+                {% block sidebar4 %}{% endblock %}
+            </div>
+        </div>
+    </body>
 </html>

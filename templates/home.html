@@ -1,25 +1,60 @@
 {% extends 'master.html' %}
-{% block title %}
-	Principal
-{% endblock %}
 
-{% block sidebar%}
-<ul >
-	<li><a href="#">Principal</a></li>
-	<li><a href="#">About</a></li>
-	<li><a href="#">Contact us</a></li>
+{% block title %}Comunidad Educativa Boliviana "Adela"{% endblock %}
+
+{% block toolbar %}
+<ul>
+    <li><a href="#">Ingresar</a></li>
+    <li><a href="#"><span class="cyan_fg">Registrarse</span></a></li>
 </ul>
 {% endblock %}
 
-{% block content %}
-<h1>Beta overhead is works!</h1>
-<p>
-Siiiiiiiiiiii
-</p>
+{% block menubar %}
+<ul class="left">
+    <li class="yellow"><a href="#">Principal</a></li>
+    <li class="blue"><a href="#">Contenidos minimos</a></li>
+    <li class="red"><a href="#">Comunidades</a></li>
+    <li class="green"><a href="#">Calendario</a></li>
+</ul>
 {% endblock %}
 
-{% block footer %}
-<p>
-&copy; Copyright  by Beta Overhead
-</p>
+{% block sidebar1 %}
+<div class="widget">
+    <h2>Usuarios</h2>
+    <form action="" method="post">
+        <p><label>Correo electrónico:</label><input type="text" /></p>
+        <p><label>Contraseña:&nbsp;<a class="right" href="#">¿la olvidaste?</a></label><input type="password" /></p>
+        <p><input type="submit" value="Ingresar" /></p>
+    </form>
+</div>               
+{% endblock %}
+
+{% block sidebar2 %}
+<div class="widget">
+    <h2>¿Aún no formas parte?</h2>
+    <a class="right button" href="">Unetenos! :)</a>
+    <div class="clear"></div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <h1>Aprendiendo juntos! <span class="cyan_fg">por un futuro mejor.</span></h1>
+    <p id="infograph_top">¿Cómo funciona?</p>
+    <div id="infograph">
+        <div class="step">
+            <h2>Registrate</h2>
+            <p>Indicanos tu nombre, correo electrónico, y un pseudonimo para poder reconocerte.</p>
+        </div>
+        <div class="fill_1"></div>
+        <div class="step">
+            <h2>Crea un espacio o adhierete a un espacio</h2>
+            <p>Es el lugar en donde se encuentran las herramientas para trabajar en el contenido de tu espacio.</p>
+        </div>
+        <div class="fill_1"></div>
+        <div class="step">
+            <h2>Trabajemos juntos!</h2>
+            <p>Podrás trabajar sobre el contenido de tu espacio, así como colaborar con otros espacios.</p>
+        </div>
+        <div class="fill_2"></div>
+    </div>
 {% endblock %}
