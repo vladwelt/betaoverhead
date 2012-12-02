@@ -24,17 +24,29 @@
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
-        <div id="toolbar"><div id="toolbar_wrapper">{% block toolbar %}{% endblock %}</div></div>
+        <div id="toolbar">
+            <div id="toolbar_wrapper">
+                {% block toolbar %}{% endblock %}
+                <div class="clear"></div>
+            </div>
+        </div>
         <div id="menubar">
             <div id="menubar_wrapper">
+                <div id="logo"></div>
                 {% block menubar %}{% endblock %}
-                <ul id="contact" class="right">
+                <ul class="right">
                     <li><a href="#">Contactenos</a></li>
                 </ul>
+                <div class="clear"></div>
             </div>
         </div>
         <div id="content">
-            <div id="main">{% block content %}{% endblock %}</div>
+            <div id="main">
+                <div id="main_wrapper">
+                    {% block content %}{% endblock %}
+                </div>
+                <div id="footer"></div>
+            </div>
             <div id="sidebar">
                 {% block sidebar1 %}{% endblock %}
                 {% block sidebar2 %}{% endblock %}
