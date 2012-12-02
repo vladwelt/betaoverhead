@@ -16,8 +16,15 @@ def profile(request):
 
 @login_required
 def user_profile(request,id):
-    user = get_object_or_404(User,id=id)
+    user    = get_object_or_404(User,id=id)
     profile = get_object_or_404(Profile,user=user)
     return render_to_response(
                   'profile/user_profile.html',
                   {'user':request.user,'profile':profile})
+
+@login_required
+def dashboard(request):
+    user = get_object_or_404(Profile,user=request.user)
+    return render_to_response(
+                 'dashboard/dashboard.html',
+                 {'user':request.user})

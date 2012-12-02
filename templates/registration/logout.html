@@ -11,22 +11,7 @@
 
 
 {% block content %}
-<div id ="content-center">
-
-    {# {% block content_title %} #}
-    <br /><br /><br /><br />
-    <h2 class="color2">Logout</h2>
-    <br /><br /><br /><br />
-    {# {% endblock %} #}
-
-  <form action="{% url django.contrib.auth.views.login %}" method="post" class="login_form">{% csrf_token %}
-    <p><label for="id_username">Email</label> </p>
-        <input type="text" name="username" id="id_username">
-    <p><label for="id_password">Password</label> </p>
-        <input type="password" name="password" id="id_password">
-    <p class="submit"><button type="submit" name="submit" value="Login">Log in</button>
-
-    <input type="hidden" name="next" value="{% if next %}{{ next }}{% else %}/{% endif %}">
-  </form>
+<div>
+    <h2>Logout</h>
 </div>
 {% endblock %}

@@ -1,0 +1,90 @@
+[{"pk": 2, 
+  "model": "auth.user", 
+  "fields": {"username": "carlos", 
+             "first_name": "Carlos", 
+             "last_name": "Caballero", 
+             "is_active": true, 
+             "is_superuser": true, 
+             "is_staff": true, 
+             "last_login": "2012-12-02T07:48:16Z", 
+             "groups": [], 
+             "user_permissions": [], 
+             "password": "pbkdf2_sha256$10000$VQFT3J5fIv1E$imlD8EVpKyYYRJUKbMN69IT31zw3mNXavWgNCd8CsVI=", 
+             "email": "cjib@gmail.com", 
+             "date_joined": "2012-12-02T07:48:16Z"}
+             }, 
+ {"pk": 3, 
+  "model": "auth.user", 
+  "fields": {"username": "liz", 
+             "first_name": "Lizbeth", 
+             "last_name": "Leaños", 
+             "is_active": true, 
+             "is_superuser": false, 
+             "is_staff": false, 
+             "last_login": "2012-12-02T08:14:06Z", 
+             "groups": [], 
+             "user_permissions": [], 
+             "password": "pbkdf2_sha256$10000$F3oxIfZfvHaK$U07ieXYfiivL5mA6FlJx8amR7bp1rj8pW28r76K0XXo=", 
+             "email": "rizel@gmail.com", 
+             "date_joined": "2012-12-02T08:02:37Z"
+             }
+ },
+ {"pk": 4, 
+  "model": "auth.user", 
+  "fields": {"username": "directo", 
+             "first_name": "Javier", 
+             "last_name": "Ascargorta", 
+             "is_active": true, 
+             "is_superuser": false, 
+             "is_staff": false, 
+             "last_login": "2012-12-02T08:14:06Z", 
+             "groups": [], 
+             "user_permissions": [], 
+             "password": "pbkdf2_sha256$10000$F3oxIfZfvHaK$U07ieXYfiivL5mA6FlJx8amR7bp1rj8pW28r76K0XXo=", 
+             "email": "javierascargorta@gmail.com", 
+             "date_joined": "2012-12-02T08:02:37Z"
+             }
+ },
+ {"pk": 1, 
+  "model": "registration.registrationprofile", 
+  "fields": {"activation_key": "ALREADY_ACTIVATED", 
+             "user": 2
+            }
+ },
+ {"pk": 2, 
+  "model": "registration.registrationprofile", 
+  "fields": {"activation_key": "ALREADY_ACTIVATED", 
+             "user": 3
+            }
+  },
+  {"pk": 3, 
+  "model": "registration.registrationprofile", 
+  "fields": {"activation_key": "ALREADY_ACTIVATED", 
+             "user": 4
+            }
+  },
+  {"pk": 1,
+   "model": "users.profile", 
+   "fields": {"phone": "1234567", 
+              "address": "Ciudad satelite", 
+              "user": 2, 
+              "type_user": "P"
+             }
+  },
+  {"pk": 2,
+   "model": "users.profile", 
+   "fields": {"phone": "1234567", 
+              "address": "cbba 123", 
+              "user": 3, 
+              "type_user": "S"
+             }
+  },
+  {"pk": 3,
+   "model": "users.profile", 
+   "fields": {"phone": "1234567", 
+              "address": "udabol", 
+              "user": 4, 
+              "type_user": "D"
+             }
+  }
+]

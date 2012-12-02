@@ -32,6 +32,21 @@
 				{% endblock %}
 				
 			</nav>
+			{% block logarea %}
+            <div>
+              {% if user.is_authenticated %}
+              <span>Bienvenido, {{ user.first_name }}.</span>
+              <a href="/">Mi cuenta</a>
+              <a href="{% url auth_logout %}">Salir</a>
+              {% else %}
+              <a href="{% url registration_register %}">Registrar</a>
+              <span> | </span>
+              <a href="{% url auth_login %}">Ingresar</a>
+              <span> | </span>
+              <a href="{% url auth_password_reset %}">Recosdar mi contraseña</a>
+              {% endif %}
+            </div>
+            {% endblock %}
 
 			<div id="content">
 				{% block  content %}

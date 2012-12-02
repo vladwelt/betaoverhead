@@ -1,13 +1,13 @@
 {% extends "registration/base_registration.html" %}
 {% load i18n %}
 
-{% block title %}{% trans 'Activation email sent' %}{% endblock %}
+{% block title %}{% trans 'Correo de activación enviado' %}{% endblock %}
 
 {% block content %}
-<div id="content-center">
-    <br /><br /><br /><br />
-    <h2 class="color2">{% trans 'Activation email sent' %}</h2>
-    <br /><br /><br />
-    <p>registration{% blocktrans %}An activation email has been sent.  Please check your email and click on the link to activate your account.{% endblocktrans %}</p>
+<div>
+    <h2>{% trans 'Correo de activación enviado' %}</h2>
+    <p>Registro: {% blocktrans %}Un email de activación ha sido enviado.  
+       Porvafor revisa tu correo electronico y presiona en el enlace de
+       activa tu cuenta.{% endblocktrans %}</p>
 </div><!-- end of#content-center -->
 {% endblock %}
