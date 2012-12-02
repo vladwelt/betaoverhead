@@ -13,6 +13,7 @@ syntax: glob
 *.snm
 *.vrb
 *.synctex.gz
+*.pyc
 
 .svn/
 .cache/
