@@ -2,22 +2,6 @@
 
 {% block title %}Comunidad Educativa Boliviana "Adela"{% endblock %}
 
-{% block toolbar %}
-<ul>
-    <li><a href="#">Ingresar</a></li>
-    <li><a href="#"><span class="cyan_fg">Registrarse</span></a></li>
-</ul>
-{% endblock %}
-
-{% block menubar %}
-<ul class="left">
-    <li class="yellow"><a href="#">Principal</a></li>
-    <li class="blue"><a href="#">Contenidos minimos</a></li>
-    <li class="red"><a href="#">Comunidades</a></li>
-    <li class="green"><a href="#">Calendario</a></li>
-</ul>
-{% endblock %}
-
 {% block sidebar1 %}
 <div class="widget">
     <h2>Usuarios</h2>
@@ -41,20 +25,18 @@
     <h1>Aprendiendo juntos! <span class="cyan_fg">por un futuro mejor.</span></h1>
     <p id="infograph_top">¿Cómo funciona?</p>
     <div id="infograph">
-        <div class="step">
+        <div class="step first">
             <h2>Registrate</h2>
             <p>Indicanos tu nombre, correo electrónico, y un pseudonimo para poder reconocerte.</p>
         </div>
-        <div class="fill_1"></div>
-        <div class="step">
+        <div class="step first">
             <h2>Crea un espacio o adhierete a un espacio</h2>
             <p>Es el lugar en donde se encuentran las herramientas para trabajar en el contenido de tu espacio.</p>
         </div>
-        <div class="fill_1"></div>
-        <div class="step">
+        <div class="step first">
             <h2>Trabajemos juntos!</h2>
             <p>Podrás trabajar sobre el contenido de tu espacio, así como colaborar con otros espacios.</p>
         </div>
-        <div class="fill_2"></div>
+        <div class="clear"></div>
     </div>
 {% endblock %}
